@@ -1,5 +1,4 @@
 PartyRock
-
 =========
 
 Collaborative Playlists Using Spotify API
