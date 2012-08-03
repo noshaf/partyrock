@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def new
-    raise params[:uid]
+    @uid = params[:uid]
   end
 
   def edit
