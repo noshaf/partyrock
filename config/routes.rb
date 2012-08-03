@@ -1,5 +1,17 @@
 Partyrock::Application.routes.draw do
 
+  get "parties/new"
+
+  get "parties/edit"
+
+  get "parties/show"
+
+  get "parties/index"
+
+  get "parties/update"
+
+  get "parties/destroy"
+
   get "users/new"
 
   get "users/edit"

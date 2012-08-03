@@ -1,6 +1,5 @@
-class UsersController < ApplicationController
+class PartiesController < ApplicationController
   def new
-    raise params[:uid]
   end
 
   def edit
