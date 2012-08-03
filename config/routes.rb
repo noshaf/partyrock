@@ -1,5 +1,17 @@
 Partyrock::Application.routes.draw do
 
+  get "users/new"
+
+  get "users/edit"
+
+  get "users/show"
+
+  get "users/index"
+
+  get "users/update"
+
+  get "users/destroy"
+
   get   '/login', :to => 'sessions#new', :as => :login
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/auth/failure', :to => 'sessions#failure'
