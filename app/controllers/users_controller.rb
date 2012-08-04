@@ -9,10 +9,12 @@ class UsersController < ApplicationController
   end
 
   def index
+    @uid = params[:uid]
   end
 
   def destroy
   end
+  
   def update
   end
 
