@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user.save
       redirect_to new_user_path, :alert => "Thanks for signing up!"
     else
-      redirect_to user_path(user)
+      redirect_to users_path
     end
   end
   
