@@ -4,8 +4,9 @@ class SessionsController < ApplicationController
 
   def create
     auth_hash = request.env['omniauth.auth']
-
-    render :text => auth_hash["uid"]
+    
+    redirect_to users_path
+    # render :text => auth_hash["uid"]
   end
   
   def destroy
