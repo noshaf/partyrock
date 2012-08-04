@@ -4,7 +4,8 @@ class SessionsController < ApplicationController
 
   def create
     auth_hash = request.env['omniauth.auth']
-    user = User.new(:uid => auth_hash["uid"])
+    uid = auth_hash["uid"].to_s
+    user = User.new(:uid => uid)
     if user.save
       redirect_to user_path(user), :alert => "Welcome Back."
     else
