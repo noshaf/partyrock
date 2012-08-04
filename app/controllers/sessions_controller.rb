@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     uid = auth_hash["uid"]
     # user = User.new(:uid => "324523452")
     # if user.save
-      redirect_to users_path, :uid => uid
+      redirect_to "/users?uid=#{uid}"
     # else
     #       redirect_to new_user_path, :alert => "Thanks for signing up!"
     #     end
