@@ -1,28 +1,8 @@
 Partyrock::Application.routes.draw do
 
-  get "parties/new"
+  resources :parties
 
-  get "parties/edit"
-
-  get "parties/show"
-
-  get "parties/index"
-
-  get "parties/update"
-
-  get "parties/destroy"
-
-  get "users/new"
-
-  get "users/edit"
-
-  get "users/show"
-
-  get "users/index"
-
-  get "users/update"
-
-  get "users/destroy"
+  resources :users
 
   get   '/login', :to => 'sessions#new', :as => :login
   match '/auth/:provider/callback', :to => 'sessions#create'
