@@ -3,6 +3,8 @@ Partyrock::Application.routes.draw do
   resources :parties
 
   resources :users
+  
+  root :to => 'parties#index'
 
   get   '/login', :to => 'sessions#new', :as => :login
   match '/auth/:provider/callback', :to => 'sessions#create'

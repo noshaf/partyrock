@@ -13,6 +13,7 @@ class PartiesController < ApplicationController
 
   def destroy
   end
+  
   def update
   end
 
