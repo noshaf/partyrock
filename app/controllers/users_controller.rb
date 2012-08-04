@@ -9,6 +9,8 @@ class UsersController < ApplicationController
   end
 
   def index
+    @user = User.new(:uid => params[:uid])
+    @user.save
     @uid = params[:uid]
   end
 
