@@ -13,6 +13,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    destroy_session
+    redirect_to parties_path, :alert => "Signed Out" 
   end
   
   def update
