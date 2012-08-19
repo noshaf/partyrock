@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
     auth_hash = request.env['omniauth.auth']
     uid = auth_hash["uid"]
     user = User.new(:uid => uid)
+    session[:user_id] = user.id
     if user.save
       redirect_to new_user_path, :alert => "Thanks for signing up!"
     else

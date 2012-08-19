@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
 
   def destroy_session
   	@current_user = nil
+  	session[:user_id] = nil
   end
 
   def authenticate_user!
