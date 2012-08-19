@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       redirect_to new_user_path, :alert => "Thanks for signing up!"
     else
       session[:user_id] = User.find_by_uid(uid).id
-      redirect_to users_path, :alert => "Welcome Back"
+      redirect_to parties_path, :alert => "Welcome Back"
     end
   end
 
