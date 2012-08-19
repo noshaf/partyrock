@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     uid = auth_hash["uid"]
     user = User.new(:uid => uid)
     session[:user_id] = user.id
+    raise session[:user_id].inspect
     if user.save
       redirect_to new_user_path, :alert => "Thanks for signing up!"
     else
