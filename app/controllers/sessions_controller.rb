@@ -12,10 +12,12 @@ class SessionsController < ApplicationController
       redirect_to users_path, :alert => "Welcome Back"
     end
   end
-  
-  def destroy
-  end
 
   def failure
+  end
+
+  def destroy
+    destroy_session
+    redirect_to parties_path, :alert => "Signed Out" 
   end
 end
