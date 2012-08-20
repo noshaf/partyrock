@@ -29,12 +29,14 @@
           <a class="brand" href="#">Juke</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Home", parties_path  %></li>
-              <li><%= link_to "New Party",new_party_path  %></li>
+              <li><%= link_to "Home", static_pages_index_path  %></li>
+              <li><%= link_to "About Us", static_pages_new_path  %></li>
               </ul>
               <ul class="nav pull-right">
               <% if current_user %>
-			          <li><%= link_to "Sign Out", user_path(current_user), :method => :delete  %></li>
+                <li><%= link_to "Join Party", parties_path  %></li>
+                <li><%= link_to "New Party",  new_party_path  %></li>
+			          <li><%= link_to "Sign Out",   user_path(current_user), :method => :delete  %></li>
               <% else %>
                 <li><%= link_to "Sign In", login_path  %></li>
               <% end %>
@@ -55,7 +57,7 @@
       </div><!--/content-->
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; DJuke 2012</p>
       </footer>
 
     </div> <!-- /container -->

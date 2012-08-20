@@ -11,3 +11,9 @@
  *= require_self
  *= require_tree .
  */
+
+ #spotify {
+ 	background: #00FF66;
+ 	/*color: #E0E0E0;*/
+ 	text-align: center;
+ }
