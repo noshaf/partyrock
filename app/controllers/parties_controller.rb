@@ -11,6 +11,7 @@ class PartiesController < ApplicationController
 
   def show
     @party = Party.find(params[:id])
+    @party_tracks = @party.party_tracks
   end
 
   def index
