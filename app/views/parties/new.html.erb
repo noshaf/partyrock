@@ -1,2 +1,13 @@
-<h1>Parties#new</h1>
-<p>Find me in app/views/parties/new.html.erb</p>
+<div class="span12">
+	<div class="well" id="spotify">
+		<h1>Give your party a name</h1>
+
+		<%= form_for(@party) do |u|%>
+
+		  <%= u.text_field :name %><br>
+		  <%= u.submit %>
+
+		<% end %>
+	</div>
+</div>
+

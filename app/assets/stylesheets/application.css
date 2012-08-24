@@ -13,7 +13,19 @@
  */
 
  #spotify {
+
  	background: #00FF66;
  	/*color: #E0E0E0;*/
  	text-align: center;
+ 	
  }
+
+ #parties-search {
+
+	height: 300px;
+	overflow: auto;
+	padding-down: 10px;
+	background: #00FF66;
+	opacity: 0.4;
+}
+
