@@ -1,6 +1,7 @@
 class PartiesController < ApplicationController
-
   # before_filter :authenticate_user!, :except => :index
+
+  # include Spotify
 
   def new
     @party = Party.new
@@ -12,6 +13,7 @@ class PartiesController < ApplicationController
   def show
     @party = Party.find(params[:id])
     @party_tracks = @party.party_tracks
+    @song = Song.new
   end
 
   def index

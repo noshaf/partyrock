@@ -1,10 +1,14 @@
 Partyrock::Application.routes.draw do
 
+  get "songs/update"
+
   get "static_pages/index"
 
   get "static_pages/new"
 
   resources :parties
+
+  resources :songs
 
   resources :users
   

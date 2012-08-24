@@ -1,0 +1,16 @@
+<div class="well">
+	<table class='table table-striped'>
+		<tbody>
+			<% @songs.each_with_index do |song, i| %>
+          		<tr>
+            		<td>
+              			<%= "#{i+1}." %>
+	            	</td>
+	            	<td>
+	               		<%= "#{song[0]}" %>
+	            	</td>
+          		</tr>
+	        <% end %>
+	    </tbody>
+	</table>
+</div>

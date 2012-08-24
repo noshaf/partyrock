@@ -17,7 +17,7 @@
  	background: #00FF66;
  	/*color: #E0E0E0;*/
  	text-align: center;
- 	
+
  }
 
  #parties-search {
@@ -27,5 +27,33 @@
 	padding-down: 10px;
 	background: #00FF66;
 	opacity: 0.4;
+
+}
+
+#spotify-playlist {
+
+	background: #00FF66;
+ 	/*color: #E0E0E0;*/
+ 	text-align: center;
+ 	height: 300px;
+
+}
+
+.playlist {
+
+	height: 270px;
+	overflow: auto;
+	padding-down: 10px;
+	background: #E8E8E8;
+	border-radius: 10px 5px;
+
+}
+
+.search {
+	height: 172px;
+	overflow: auto;
+	padding-down: 10px;
+	background: #E8E8E8;
+	border-radius: 10px 5px;
 }
 

@@ -3,7 +3,7 @@ require 'net/http'
 
 module Spotify
 
-  def self.call(song_name)
+  def call(song_name)
     @@song_name = to_url(song_name)
     get_songs
   end
