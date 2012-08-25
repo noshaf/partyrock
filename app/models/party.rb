@@ -12,7 +12,7 @@ class Party < ActiveRecord::Base
   def party_tracks
     party_tracks = []
     self.songs.each do |song|
-      party_tracks << song.track_key
+      party_tracks << song.track_key.gsub("spotify:track:","")
     end
     party_tracks.join(',')
   end
