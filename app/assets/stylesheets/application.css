@@ -12,10 +12,16 @@
  *= require_tree .
  */
 
+#spotify-play-button {
+
+	text-align: center;
+
+}
+
  #spotify {
 
  	background: #00FF66;
- 	/*color: #E0E0E0;*/
+ 	height: 300px;
  	text-align: center;
 
  }
