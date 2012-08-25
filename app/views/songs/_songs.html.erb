@@ -4,7 +4,7 @@
 			<% @songs.each_with_index do |song, i| %>
           		<tr id="<%= i %>">
           			<td>
-          				<h5><%= link_to "Add" , "songs/new?#name={song[0]}&artist=#{song[2]}&track=#{song[1]}", :remote => true %></h5>
+          				<h5><%= link_to "Add" , "#{new_song_url}?name=#{song[0]}&artist=#{song[2]}&track_key=#{song[1]}&party_id=#{@party_id}", :remote => true %></h5>
           			</td>
 	            	<td>
 	               		<%= "#{song[0]}" %>
