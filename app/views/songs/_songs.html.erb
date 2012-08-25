@@ -1,16 +1,30 @@
 <div class="well">
-	<table class='table table-striped'>
+	<table class='table table-hover'>
 		<tbody>
 			<% @songs.each_with_index do |song, i| %>
-          		<tr>
-            		<td>
-              			<%= "#{i+1}." %>
-	            	</td>
+          		<tr id="<%= i %>">
+          			<td>
+          				<h5><%= link_to "Add" , "songs/new?#name={song[0]}&artist=#{song[2]}&track=#{song[1]}", :remote => true %></h5>
+          			</td>
 	            	<td>
 	               		<%= "#{song[0]}" %>
+	            	</td>
+	            	<td>
+	            		<%= "#{song[2]}" %>
 	            	</td>
           		</tr>
 	        <% end %>
 	    </tbody>
 	</table>
 </div>
+
+<script>
+<%= @songs.each_with_index do |song, i| %>
+	$('<%=j "##{i}" %>').hover(
+		function(){ $('<%=j "##{i}" %>').css('opacity', '0.4') 
+		},
+		function(){ $('<%=j "##{i}" %>').css('opacity', '1')
+		})
+<% end %>
+
+</script>

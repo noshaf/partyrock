@@ -1,7 +1,5 @@
 Partyrock::Application.routes.draw do
 
-  get "songs/update"
-
   get "static_pages/index"
 
   get "static_pages/new"
@@ -12,7 +10,7 @@ Partyrock::Application.routes.draw do
 
   resources :users
   
-  root :to => 'parties#index'
+  root :to => 'static_pages#index'
 
   get   '/login', :to => 'sessions#new', :as => :login
   match '/auth/:provider/callback', :to => 'sessions#create'

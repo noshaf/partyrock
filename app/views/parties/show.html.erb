@@ -12,19 +12,13 @@
 		<div class="playlist">
 			<table class='table table-striped'>
 	        	<tbody>
-		          <% 20.times do |party| %>
+		          <% @party.songs.each_with_index do |s,i| %>
 		          	<tr>
 		            	<td>
-		              		1.
+		              		<%= "#{i}" %>
 			            </td>
 			            <td>
-			               	Name
-			            </td>
-			            <td>
-			               	Artists
-			            </td>
-			            <td>
-			               	
+			               	<%= s.name %>
 			            </td>
 		          	</tr>
 		          <% end %>
@@ -41,7 +35,7 @@
 		<%= form_for [@song], :remote => true do |f| %>
 		  <%= f.label :name %>
 		  <%= f.text_field :name %><br>
-		  <%= f.submit %>
+		  <%= f.submit "Search Songs",  :class => "btn btn-primary" %>
 		<% end %>
 
 		<div class="search">
@@ -50,3 +44,4 @@
 	
 	</div>
 </div>
+
