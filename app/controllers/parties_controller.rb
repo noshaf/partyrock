@@ -17,7 +17,13 @@ class PartiesController < ApplicationController
   end
 
   def index
+    @url = parties_url
+    @parties = Party.find_all_by_name(params[:search])
     @party = Party.new
+    respond_to do |format|
+      format.html {  }
+      format.js
+    end
   end
 
   def create

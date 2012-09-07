@@ -1,7 +1,7 @@
 class Party < ActiveRecord::Base
   attr_accessible :name, :songs
 
-  # validates_presence_of :user_id
+  validates_presence_of :user_id
 
   has_many :songs
   belongs_to :user
