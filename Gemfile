@@ -4,6 +4,7 @@ gem 'rails', '3.2.7'
 
 gem 'pg'
 gem 'activerecord-reputation-system', require: 'reputation_system'
+gem 'twitter-bootstrap-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
