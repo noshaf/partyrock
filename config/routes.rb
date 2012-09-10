@@ -6,7 +6,9 @@ Partyrock::Application.routes.draw do
 
   resources :parties
 
-  resources :songs
+  resources :songs do
+    member { post :vote }
+  end
 
   resources :users
   

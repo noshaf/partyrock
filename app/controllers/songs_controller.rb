@@ -24,4 +24,11 @@ include Spotify
       format.js
     end
   end
+
+  def vote
+  	value = params[:type] == "up" ? 1 : -1
+	  @song = Song.find(params[:id])
+	  @song.add_or_update_evaluation(:votes, value, current_user)
+	  redirect_to :back
+	end
 end

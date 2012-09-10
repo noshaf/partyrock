@@ -1,9 +1,9 @@
 <div class="span12">
 	<div class="well" id="spotify">
 		<h1>Search for a Party</h1><br>
-		<%= form_for (@party), :remote => true do |f| %>
-			<%= f.search_field :name %><br>
-		<% end %>
+		<form>
+			<input id="party_name" type="search" />
+		</form>
 		<div class="gary">
 		</div>
 	</div>

@@ -4,7 +4,7 @@
           <% @parties.each do |p| %>
           	<tr>
 	            <td>
-	               	<%= p.name %>
+	               	<%= link_to p.name, party_path(p) %>
 	            </td>
           	</tr>
           <% end %>
