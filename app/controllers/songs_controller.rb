@@ -30,5 +30,8 @@ include Spotify
 	  @song = Song.find(params[:id])
 	  @song.add_or_update_evaluation(:votes, value, current_user)
 	  redirect_to :back
-	end
+	  respond_to do |format|
+        format.js
+      end
+  end
 end
