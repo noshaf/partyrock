@@ -1,5 +1,5 @@
 class Song < ActiveRecord::Base
-  attr_accessible :name, :artist, :track_key
+  attr_accessible :name, :artist, :track_key, :user
 
   has_reputation :votes, source: :user, aggregated_by: :sum
 
