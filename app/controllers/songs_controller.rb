@@ -29,8 +29,5 @@ include Spotify
   	value = params[:type] == "up" ? 1 : -1
 	  @song = Song.find(params[:id])
 	  @song.add_or_update_evaluation(:votes, value, current_user)
-	  respond_to do |format|
-        format.js
-      end
   end
 end
