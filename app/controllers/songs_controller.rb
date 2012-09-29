@@ -32,7 +32,8 @@ include Spotify
 	  		@song.add_or_update_evaluation(:votes, value, current_user)
 		rescue
 		end
-		@songs = Song.where(party_id: params[:party_id]).order
+		@party = Party.find(params[:party_id])
+    	@songs = @party.songs.find_with_reputation(:votes, :all, order: 'votes desc')
 	  	respond_to do |format|
 	      	format.js
 	    end
