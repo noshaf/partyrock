@@ -7,7 +7,4 @@ class Song < ActiveRecord::Base
 
   belongs_to :party
 
-  def user
-  end
-
 end
