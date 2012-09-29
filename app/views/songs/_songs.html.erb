@@ -17,14 +17,3 @@
 	    </tbody>
 	</table>
 </div>
-
-<script>
-<%= @songs.each_with_index do |song, i| %>
-	$('<%=j "##{i}" %>').hover(
-		function(){ $('<%=j "##{i}" %>').css('opacity', '0.4') 
-		},
-		function(){ $('<%=j "##{i}" %>').css('opacity', '1')
-		})
-<% end %>
-
-</script>
