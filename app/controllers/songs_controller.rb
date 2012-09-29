@@ -9,9 +9,9 @@ include Spotify
 		@song.party = @party
 		@party_tracks = @party.party_tracks
 		if @song.save
-		respond_to do |format|
-      		format.js
-    	end
+			respond_to do |format|
+	      		format.js
+	    	end
 	  	else
 	  		redirect_to party_path(@party), :alert => "could not add song"
 	  	end
@@ -32,7 +32,8 @@ include Spotify
 	  		@song.add_or_update_evaluation(:votes, value, current_user)
 		rescue
 		end
-		@party = Party.find(params[:id])
-	  	redirect_to party_path(@party)
+	  	respond_to do |format|
+	      	format.js
+	    end
   	end
 end
