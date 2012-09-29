@@ -11,8 +11,8 @@ class PartiesController < ApplicationController
   end
 
   def show
-    @songs = Song.where(party_id: params[:id]).order
     @party = Party.find(params[:id])
+    @songs = @party.songs.find_with_reputation(:votes, :all, order: 'votes desc')
     @party_tracks = @party.party_tracks
     @song = Song.new
   end
