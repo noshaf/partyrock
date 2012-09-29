@@ -30,8 +30,6 @@ include Spotify
 		@song = Song.find(params[:id])
 	  	@song.add_or_update_evaluation(:votes, value, current_user)
 	  	@party = Party.find(params[:id])
-	  	respond_to do |format|
-     		format.js
-    	end
+	  	redirect_to party_path(@party)
   	end
 end
