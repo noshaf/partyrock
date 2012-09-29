@@ -6,4 +6,8 @@ class Song < ActiveRecord::Base
   validates_presence_of :party_id, :name, :artist, :track_key
 
   belongs_to :party
+
+  def user
+  end
+
 end
