@@ -32,7 +32,7 @@ include Spotify
 	  		@song.add_or_update_evaluation(:votes, value, current_user)
 		rescue
 		end
-		@party = Party.find(params[:party_id])
+		@songs = Song.where(party_id: params[:party_id]).order
 	  	respond_to do |format|
 	      	format.js
 	    end
