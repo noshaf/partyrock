@@ -28,8 +28,11 @@ include Spotify
   	def vote
   		value = params[:type] == "up" ? 1 : -1
 		@song = Song.find(params[:id])
-	  	@song.add_or_update_evaluation(:votes, value, current_user.id)
-	  	@party = Party.find(params[:id])
+		begin
+	  		@song.add_or_update_evaluation(:votes, value, current_user)
+		rescue
+		end
+		@party = Party.find(params[:id])
 	  	redirect_to party_path(@party)
   	end
 end
