@@ -11,10 +11,16 @@ class Party < ActiveRecord::Base
 
   def party_tracks
     party_tracks = []
-    self.songs.each do |song|
+    songs_ordered.each do |song|
       party_tracks << song.track_key.gsub("spotify:track:","")
     end
     party_tracks.join(',')
+  end
+
+  private 
+
+  def songs_ordered
+    self.songs.find_with_reputation(:votes, :all, order: 'votes desc')
   end
 
 end
