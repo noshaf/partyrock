@@ -3,6 +3,7 @@ include Spotify
 
 	def new
 		@party = Party.find(params[:party_id])
+		@songs = @party.songs
 		@song = @party.songs.new(:name => params[:name],
 								 :artist => params[:artist],
 								 :track_key => params[:track_key])
