@@ -23,8 +23,8 @@
 			            	            	<td>
             	<%= pluralize s.reputation_value_for(:votes).to_i, "vote" %>
 				<% if current_user && !current_user.voted_for?(s) %>
-  					<%= link_to "up", vote_song_path(s, type: "up"), method: "post", remote: true %>
-  					<%= link_to "down", vote_song_path(s, type: "down"), method: "post", remote: true %>
+  					<%= link_to "up", vote_song_path(s, type: "up"), method: "post", remote: "true" %>
+  					<%= link_to "down", vote_song_path(s, type: "down"), method: "post", remote: "true" %>
 				<% end %>
 				</td>
 		          	</tr>
