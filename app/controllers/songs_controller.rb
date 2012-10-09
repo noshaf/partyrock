@@ -3,7 +3,7 @@ include Spotify
 
 	def new
 		@party = Party.find(params[:party_id])
-		@songs = @party.songs
+		@songs = @party.songs.find_with_reputation(:votes, :all, order: 'votes desc')
 		@song = @party.songs.new(:name => params[:name],
 								 :artist => params[:artist],
 								 :track_key => params[:track_key])
